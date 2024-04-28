@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors!</title>
+    <link rel="icon" type="image/x-icon" href="img/rpsLogo.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/213e54b3b6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/Logo-bg-black.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body style="text-align: center;">
+    <!-- ACTUAL -->
+    <div class="container mt-5">
+        <div class="row pt-2" style="margin-bottom: 100px; margin-top: 90px;" id="scoreHeader">
+            <div class="col-6">
+                <h1 class="justify-content-center align-items-center" id="exampleModalLabel" style="font-size: 50px !important;">
+                    Rock, Paper, Scissor Score Board
+                </h1>
+            </div>
+            <div class="col-3">
+                <h3>Human Score: <span id="human-score1">0</span></h3>
+            </div>
+            <div class="col-3">
+                <h3>Robot Score: <span id="robot-score1">0</span></h3>
+            </div>
+        </div>
+        <h1 class="mt-5">ROCK, PAPER, SCISSORS</h1>
+        <div class="row">
+            <div class="col-sm-4 col-4">
+                <button style="background-color: #db32d8;" onclick="playGame('Rock');" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#gameModal">
+                    <img class="w-100" src="img/humanRock.png" alt="">
+                </button>
+            </div>
+            <div class="col-sm-4 col-4">
+                <button onclick="playGame('Paper');" class="btn btn-danger" style="background-color: #db32d8;" data-bs-toggle="modal" data-bs-target="#gameModal">
+                    <img class="w-100" src="img/humanPaper.png" alt="">
+                </button>
+            </div>
+            <div class="col-sm-4 col-4">
+                <button onclick="playGame('Scissors');" class="btn btn-dark" style="background-color: #db32d8;" data-bs-toggle="modal" data-bs-target="#gameModal">
+                    <img class="w-100" src="img/humanScissor.png" alt="" id="largeImage">
+                </button>
+            </div>
+        </div>
+        <button class="btn btn-light"><a href="index.html">Reset</a></button>
+        <!-- Modal -->
+        <div class="modal fade" id="gameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header w-100">
+                        <div class="col-6">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-size: 50px !important;">
+                                Rock, Paper, Scissor Score Board
+                            </h1>
+                        </div>
+                        <div class="col-3">
+                            <h3>Human Score: <span id="human-score">0</span></h3>
+                        </div>
+                        <div class="col-3">
+                            <h3>Robot Score: <span id="robot-score">0</span></h3>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <!-- modal body -->
+                        <div class="container-fluid">
+                            <div class="row d-flex justify-content-around">
+                                <div class="col-md-6">
+                                    <img src="#" alt="" class="w-100" id="leftHuman">
+                                    <h1>You Picked</h1>
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="#" alt="" id="rightRobot" class="w-100">
+                                    <h1>Robot Picked</h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h1>Battle History</h1>
+                                    <p id="history"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Play again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Modal -->
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</html>
